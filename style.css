@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+  
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.Parent{
+    height: 60%;
+    width: 70%;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 28px;
+    border: none;
+}
+
+.child1{
+    /* background-color: pink; */
+    height: 90%;
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+}
+
+.child2{
+    height: 90%;
+    width: 50%;
+    /* background-color: lightgreen; */
+    padding: 15px;
+}
+
+.child2 form{
+    /* background-color: lightyellow; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.child2 form .input1{
+    margin-top: 10%;
+}
+
+.child2 form input{
+    height: 15%;
+    padding: 5px;
+}
+
+.child2 form input:focus{
+    border: 2px solid #1a73e8;
+    border-radius: 4px;  
+    outline: none;
+}
+
+.button-div{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-div>button{
+    background-color: #1a73e8;
+    color: white;
+    height: 37px;
+    width: 80px;
+    border-radius: 18px;
+    border: none;
+}
+
+footer{
+    /* background-color: lightsalmon; */
+    width: 68%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+footer>select{
+    background-color: aliceblue;
+    border: none;
+}
+
+footer .links{
+    /* background-color: lightblue; */
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .links a{
+    text-decoration: none;
+    color: black;
+}
+
+footer .links a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Media Query Starts from here  for maxwidth: 768px*/
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    background-color: aliceblue;
+  }
+
+  .Parent {
+    width: 60%;
+    max-height: 70vh;
+    flex-direction: column; 
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .child1{
+    width: 100%; 
+    height: 45%; 
+  }
+
+.child2{
+    padding: 0px 15px;
+    width: 100%; 
+    height: 45%; 
+}
+
+  .child2 form{
+    justify-content: space-between;
+  }
+
+  .child2 form input{
+    min-height: 35px;
+    height: 25%;
+  }
+
+  .child2 form .input1{
+    margin-top: 0px;
+}
+
+  footer {
+    /* background-color:yellowgreen; */
+    width: 60%;
+    align-items: center;
+  }
+
+  footer .links{
+    /* background-color: lightblue; */
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+/* Media Query Starts from here  for maxwidth: 480px*/
+
+@media screen and (max-width: 480px) {
+  .Parent {
+    max-height: none;
+    min-width: 90vw;
+    height: 100vh;
+  }
+
+.Parent form input{
+  height: 15%;
+}
+
+  .child2 form{
+    justify-content: space-around;
+  }
+
+  footer {
+    display: none;
+  }
+}

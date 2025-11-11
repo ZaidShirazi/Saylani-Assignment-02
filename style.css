@@ -23,30 +23,34 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     border-radius: 28px;
-    border: none;
+    /* border: none; */
 }
 
 .child1{
-    /* background-color: pink; */
+    background-color: pink;
     height: 90%;
     width: 50%;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 8%;
 }
 
 .child2{
     height: 90%;
     width: 50%;
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .child2 form{
-    /* background-color: lightyellow; */
+    background-color: lightyellow;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -69,7 +73,7 @@ body{
 }
 
 .button-div{
-    /* background-color: aquamarine; */
+    background-color: aquamarine;
     display: flex;
     justify-content: flex-end;
 }
@@ -84,7 +88,7 @@ body{
 }
 
 footer{
-    /* background-color: lightsalmon; */
+    background-color: lightsalmon;
     width: 68%;
     height: 5%;
     display: flex;
@@ -98,7 +102,7 @@ footer>select{
 }
 
 footer .links{
-    /* background-color: lightblue; */
+    background-color: lightblue;
     width: 20%;
     display: flex;
     justify-content: space-between;
@@ -114,78 +118,46 @@ footer .links a:hover{
     color: blue;
 }
 
-/* Media Query Starts from here  for maxwidth: 768px*/
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-    background-color: aliceblue;
-  }
-
-  .Parent {
+@media (min-width:1440px){
+   
+   .Parent{
+    height: 60%;
     width: 60%;
-    max-height: 70vh;
-    flex-direction: column; 
+   }
+
+   footer{
+    height: 5%;
+    width: 60%;
+   };
+}
+
+@media (max-width:768px){
+
+    .Parent{
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    background-color: white;
+    display: flex;
     justify-content: center;
-    flex-grow: 1;
-  }
-
-  .child1{
-    width: 100%; 
-    height: 45%; 
-  }
-
-.child2{
-    padding: 0px 15px;
-    width: 100%; 
-    height: 45%; 
-}
-
-  .child2 form{
-    justify-content: space-between;
-  }
-
-  .child2 form input{
-    min-height: 35px;
-    height: 25%;
-  }
-
-  .child2 form .input1{
-    margin-top: 0px;
-}
-
-  footer {
-    /* background-color:yellowgreen; */
-    width: 60%;
     align-items: center;
-  }
+    /* flex-wrap: wrap; */
+    /* border-radius: 28px; */
+    /* border: none; */
+}
 
-  footer .links{
-    /* background-color: lightblue; */
-    width: 40%;
+.child2 form input{
+    height: 12%;
+    padding: 5px;
+}
+
+footer{
+    background-color: lightsalmon;
+    width: 100%;
+    height: 5%;
     display: flex;
     justify-content: space-between;
-}
-}
-
-/* Media Query Starts from here  for maxwidth: 480px*/
-
-@media screen and (max-width: 480px) {
-  .Parent {
-    max-height: none;
-    min-width: 90vw;
-    height: 100vh;
-  }
-
-.Parent form input{
-  height: 15%;
+    padding: 5px;
 }
 
-  .child2 form{
-    justify-content: space-around;
-  }
-
-  footer {
-    display: none;
-  }
 }
